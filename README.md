@@ -5,12 +5,14 @@ Lame and slow way to check R packages for vulnerabilities
                                 
 
 
-This script will check R package or list of R pakages on ossindex.sonatype.org
+This script will check R package or list of R pakages on ossindex.sonatype.org.
 It will report if a package has vulnerabilities, regardless of the version.
-Inspired by oysteR but slower and lamer way to do the same thing
+Is will also report if ppackage was not found on ossindex so you can do manual checks.
+Inspired by oysteR but, generally speaking, slower and lamer way to do the same thing.
 The only advantage is that we don't have to install R or any of the packages to
 perform these checks.
 We don't have to sign up for the ossindex.sonatype.org because we're taking it slow
+and going below the rate limiting.
 
 ## Example Usage:
 #### Check sigle package:
