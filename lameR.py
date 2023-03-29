@@ -42,7 +42,7 @@ def is_vulnerable(package):
     r_api = requests.get(url=url_api)
     if r_api.status_code != 200:
         time.sleep(2)
-        is_vulnerable(package)
+        is_vulnerable(package) # potentially an infinite loop, but who cares
     elif "description" not in r_api.text:
         r_web = requests.get(url=url_web)
         if r_web.status_code == 404:
